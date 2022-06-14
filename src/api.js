@@ -12,6 +12,7 @@ export const getArticles = () => {
 
 export const getTopics = () => {
   return articlesApi.get("/topics").then(({ data }) => {
-    return data.topic;
+    console.log(data);
+    return data;
   });
 };

@@ -4,22 +4,23 @@ const Nav = () => {
   const [topics, setTopic] = useState([]);
   useEffect(() => {
     getTopics().then((topicsFromApi) => {
-      setTopic(topicsFromApi);
+      setTopic(topicsFromApi.topics);
+      console.log(topicsFromApi);
     });
   });
 
   return (
-    <div className="Nav">
-      <p>Articles</p>
-      <p>
-        Topics
-        <ul>
-          {topics.map((topic) => {
-            return <li key={topic.slug}>{topic.slug}</li>;
-          })}
-        </ul>
-      </p>
-      <p>Users</p>
+    <div className="nav" id="dropdown">
+      <a href="home">Home</a>
+      <a className="dropbtn" href="topics">
+        
+            {topics.map((topic) => {
+              return <li key={topic.slug}>{topic.slug}</li>;
+            })}
+         
+       
+      </a>
+      <a href = "users" >Users</a>
     </div>
   );
 };
