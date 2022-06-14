@@ -5,7 +5,6 @@ const Nav = () => {
   useEffect(() => {
     getTopics().then((topicsFromApi) => {
       setTopic(topicsFromApi.topics);
-      console.log(topicsFromApi);
     });
   });
 
@@ -13,14 +12,11 @@ const Nav = () => {
     <div className="nav" id="dropdown">
       <a href="home">Home</a>
       <a className="dropbtn" href="topics">
-        
-            {topics.map((topic) => {
-              return <li key={topic.slug}>{topic.slug}</li>;
-            })}
-         
-       
+        {topics.map((topic) => {
+          return <li key={topic.slug}>{topic.slug}</li>;
+        })}
       </a>
-      <a href = "users" >Users</a>
+      <a href="users">Users</a>
     </div>
   );
 };
