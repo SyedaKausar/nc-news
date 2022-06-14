@@ -11,10 +11,10 @@ const Articles = () => {
 
   return (
     <>
-    <h2>All Articles</h2>
+      <h2>All Articles</h2>
       <ul className="article-list">
         {articles.map((article) => {
-          return <li key= {article.title} >{article.title}</li>;
+          return <li key={article.title}>{article.title}</li>;
         })}
       </ul>
     </>
