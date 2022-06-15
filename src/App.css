@@ -5,15 +5,22 @@
   background-color: #04AA6D;
   border:50px solid #333 ;
   text-align:center;
+  margin-top: 80px;
 
 }
+
 .nav{
   overflow: hidden;
   background-color: #333;
   position: fixed; 
   top: 0; 
-  height: 10%;
+  height: 7%;
   width: 100%;
+  list-style: none;
+  text-transform: capitalize;
+  font-weight:bold;
+  padding:10px;
+  text-align: center;
 }
 .nav a{
   float: left;
@@ -23,46 +30,24 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-.navbar a:hover {
-  background: #ddd;
-  color: red;
+.nav a:hover {
+  background: white;
+  color: #04AA6D;
+  transform: scale(1.2);
 }
 .article-list{
   font-weight: bold;
+  margin: 100px;
+  
 }
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-#dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content li {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content li:hover {background-color: #ddd;}
 .article{
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px; 
+  border:10px solid #04AA6D ;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  width: 50%;
 }
 
-.article-list{
-  margin: 100px;
+.all-articles{
+  text-align: center;
 }
