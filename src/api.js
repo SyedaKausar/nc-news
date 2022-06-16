@@ -5,7 +5,14 @@ const articlesApi = axios.create({
 });
 
 export const getArticles = (topic) => {
-  return articlesApi.get("/articles", {params:{topic:topic}}).then(({ data }) => {
+  return articlesApi
+    .get("/articles", { params: { topic: topic } })
+    .then(({ data }) => {
+      return data.article;
+    });
+};
+export const getArticle = (id) => {
+  return articlesApi.get(`/articles/${id}`).then(({ data }) => {
     return data.article;
   });
 };

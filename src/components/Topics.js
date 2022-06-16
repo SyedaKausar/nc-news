@@ -12,7 +12,7 @@ const Topics = () => {
 
   return (
     <div className="nav">
-      <a>Home</a>
+      <Link to={'/'}>Home</Link>
 
       {topics.map((topic) => {
         return (
