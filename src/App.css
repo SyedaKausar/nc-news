@@ -2,11 +2,13 @@
   text-align: center;
 }
 .header{
-  background-color: #04AA6D;
+  background-color: red;
   border:50px solid #333 ;
   text-align:center;
   margin-top: 80px;
-
+color: white;
+height: 100px;
+text-decoration: none;
 }
 
 .nav{
@@ -32,7 +34,7 @@
 }
 .nav a:hover {
   background: white;
-  color: #04AA6D;
+  color: red;
   transform: scale(1.2);
 }
 .article-list{
@@ -41,13 +43,27 @@
   
 }
 .article{
-  border:10px solid #04AA6D ;
+  border:10px solid red ;
   margin: 10px;
   padding: 10px;
   list-style: none;
   width: 50%;
+  text-align: center;
+  position: relative;
+
+  
 }
 
 .all-articles{
   text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
