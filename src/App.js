@@ -3,8 +3,8 @@ import "./App.css";
 import Articles from "./components/Articles";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
-import Topics from "./components/Topics";
 import SingleArticle from "./components/SingleArticle";
+
 function App() {
   return (
     <BrowserRouter>

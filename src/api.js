@@ -12,15 +12,21 @@ export const getArticles = (topic) => {
     });
 };
 export const getArticle = (id) => {
-  return articlesApi
-    .get(`/articles/${id}`)
-    .then(({ data }) => {
-      return data.article;
-    })
+  return articlesApi.get(`/articles/${id}`).then(({ data }) => {
+    return data.article;
+  });
 };
 
 export const getTopics = () => {
   return articlesApi.get("/topics").then(({ data }) => {
     return data;
   });
+};
+export const patchVote = (id, vote) => {
+  return articlesApi
+    .patch(`/articles/${id}`, { inc_votes: vote })
+    .then((res) => {
+      return res.data;
+    })
+    
 };
