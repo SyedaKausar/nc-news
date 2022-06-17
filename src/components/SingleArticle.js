@@ -9,6 +9,7 @@ const SingleArticle = () => {
   const [count, setCount] = useState(0);
   const [isErr, setIsErr] = useState();
   const [isClicked, setIsClicked] = useState(false);
+  const [voteErr, setVoteErr] = useState();
   const { article_id } = useParams();
   useEffect(() => {
     getArticle(article_id)
@@ -20,15 +21,20 @@ const SingleArticle = () => {
         setIsErr({ err });
       });
   }, [article_id]);
+
   function addVote() {
     if (!isClicked) {
       setCount((currCount) => {
         return currCount + 1;
       });
 
-      patchVote(article_id, 1).then((res) => {
-        setIsClicked(true);
-      });
+      patchVote(article_id, 1)
+        .then((res) => {
+          setIsClicked(true);
+        })
+        .catch((err) => {
+          setVoteErr({ err });
+        });
     }
   }
   function decreaseVote() {
@@ -37,11 +43,17 @@ const SingleArticle = () => {
         return currCount - 1;
       });
 
-      patchVote(article_id, -1).then((res) => {
-        setIsClicked(true);
-      });
+      patchVote(article_id, -1)
+        .then((res) => {
+          setIsClicked(true);
+        })
+        .catch((err) => {
+          setVoteErr({ err });
+          setIsClicked(true);
+        });
     }
   }
+
   if (isLoading) {
     return <p>Loading...</p>;
   }
